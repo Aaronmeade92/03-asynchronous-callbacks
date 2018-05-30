@@ -9,6 +9,6 @@ describe('File Reader Module', () => {
         fileReader([`${__dirname}missing.txt`], (err) => {
 
             expect(err).not.toBeUndefined();
-        })
-    })
-})
+        });
+    });
+});
