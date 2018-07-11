@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --verbose --coverage",
+    "test": "jest --verbose --coverage --forceExit",
     "lint": "eslint **/*.js"
   },
   "author": "",
