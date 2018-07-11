@@ -12,8 +12,9 @@ describe('File Reader Module', () => {
   });
 
   it('should return one file', (done) => {
-    fileReader([`${__dirname}burrito.txt`], (err, data) => {
-      let actual = data[0].toString().trim();
+    fileReader(['./data/burrito.txt'], (err, data) => {
+      console.log(data);
+      let actual = data.toString().trim();
       console.log(actual);
       expect(actual).toBe('yum burrito');
       done();
