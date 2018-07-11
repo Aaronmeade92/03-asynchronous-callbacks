@@ -9,6 +9,16 @@ describe('File Reader Module', () => {
         fileReader([`${__dirname}missing.txt`], (err) => {
 
             expect(err).not.toBeUndefined();
+            done();
         });
     });
+
+    it('should return one file', () => {
+
+        fileReader([`${__dirname}burrito.txt`], (err) => {
+            let actual = data[0].toString().trim();
+            console.log(actual);
+            expect(actual).toBe('yum burrito');
+        })
+    })
 });
